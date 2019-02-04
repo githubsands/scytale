@@ -20,6 +20,9 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"net/http"
+
+	money "github.com/Comcast/golang-money"
 	"github.com/Comcast/webpa-common/logging/logginghttp"
 	"github.com/Comcast/webpa-common/secure"
 	"github.com/Comcast/webpa-common/secure/handler"
@@ -36,7 +39,6 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/justinas/alice"
 	"github.com/spf13/viper"
-	"net/http"
 )
 
 const (
@@ -150,7 +152,7 @@ func NewPrimaryHandler(logger log.Logger, v *viper.Viper, registry xmetrics.Regi
 			),
 		)
 
-		transactor = fanout.NewTransactor(cfg)
+		transactor = money.DecorateTransactor(fanout.NewTransactor(cfg))
 		options    = []fanout.Option{
 			fanout.WithTransactor(transactor),
 		}
@@ -220,7 +222,6 @@ func NewPrimaryHandler(logger log.Logger, v *viper.Viper, registry xmetrics.Regi
 						fanout.ReturnHeadersWithPrefix("X-"),
 					),
 				)...,
-
 			),
 		),
 	)

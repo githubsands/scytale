@@ -1,10 +1,10 @@
 hash: f96b06632fb7c9b6e0a78f7b2be889e0a1a39d850d8372cf81a6928f181c5e0d
-updated: 2018-12-20T14:32:30.349635-08:00
+updated: 2019-01-09T19:31:11.109496-07:00
 imports:
 - name: github.com/armon/go-metrics
   version: f0300d1749da6fa982027e449ec0c7a145510c3c
 - name: github.com/aws/aws-sdk-go
-  version: af3e5a1c26d7fa4373c6c470f0c796a07584feda
+  version: 7be45195c3af1b54a609812f90c05a7e492e2491
   subpackages:
   - aws
   - aws/awserr
@@ -15,20 +15,13 @@ imports:
   - aws/credentials
   - aws/credentials/ec2rolecreds
   - aws/credentials/endpointcreds
-  - aws/credentials/processcreds
   - aws/credentials/stscreds
-  - aws/csm
   - aws/defaults
   - aws/ec2metadata
   - aws/endpoints
   - aws/request
   - aws/session
   - aws/signer/v4
-  - internal/ini
-  - internal/sdkio
-  - internal/sdkrand
-  - internal/sdkuri
-  - internal/shareddefaults
   - private/protocol
   - private/protocol/query
   - private/protocol/query/queryutil
@@ -44,14 +37,14 @@ imports:
 - name: github.com/billhathaway/consistentHash
   version: addea16d2229dba874111898b45be7f4a78af631
 - name: github.com/c9s/goprocinfo
-  version: 0010a05ce49fde7f50669bc7ecda7d41dd6ab824
+  version: 19cb9f127a9c8d2034cf59ccb683cdb94b9deb6c
   subpackages:
   - linux
 - name: github.com/Comcast/golang-money
-  version: 6dded2db26bc71830d013489961b285946f70658
+  version: a7259b0d9b97531dcfaf55b921b70f5c14eb1e71
   repo: git@github.com:githubsands/golang-money.git
 - name: github.com/Comcast/webpa-common
-  version: 61ce39e9b2566f2fbffc72d40078dab7b870b5bc
+  version: c5c563ffb134911fd5b12088e08b4f457ac69820
   repo: git@github.com:githubsands/webpa-common.git
   subpackages:
   - capacitor
@@ -96,8 +89,10 @@ imports:
   - spew
 - name: github.com/fsnotify/fsnotify
   version: ccc981bf80385c528a65fbfdd49bf2d8da22aa23
+- name: github.com/go-ini/ini
+  version: 6ed8d5f64cd79a498d1f3fab5880cc376ce41bbe
 - name: github.com/go-kit/kit
-  version: d8776e0eb53b39a4c78fd29ac5fe5888303b7b94
+  version: 12210fb6ace19e0496167bb3e667dcd91fa9f69b
   subpackages:
   - endpoint
   - log
@@ -121,17 +116,19 @@ imports:
   - transport/http
   - util/conn
 - name: github.com/go-logfmt/logfmt
-  version: 07c9b44f60d7ffdfb7d8efe1ad539965737836dc
+  version: 390ab7935ee28ec6b286364bba9b4dd6410cb3d5
 - name: github.com/golang/protobuf
-  version: 1d3f30b51784bec5aad268e59fd3c2fc1c2fe73f
+  version: 347cf4a86c1cb8d262994d8ef5924d4576c5b331
   subpackages:
   - proto
+- name: github.com/gorilla/context
+  version: 51ce91d2eaddeca0ef29a71d766bb3634dadf729
 - name: github.com/gorilla/mux
-  version: 6137e193cdcba2725f16de84eaf0db2b769d9668
+  version: 53c1911da2b537f792e7cafcb446b05ffe33b996
 - name: github.com/gorilla/websocket
-  version: 95ba29eb981bbb27d92e1f70bf8a1949452d926b
+  version: ea4d1f681babbce9545c9c5f3d5194a789c89f5b
 - name: github.com/hashicorp/consul
-  version: adc245ce859dac7b7245b0f41fb6a667d814bbcb
+  version: 9a494b5fb9c86180a5702e29c485df1507a47198
   subpackages:
   - api
 - name: github.com/hashicorp/go-cleanhttp
@@ -156,17 +153,17 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/hashicorp/serf
-  version: 4a3a10ccd1b09be9af798006fc9c85827b5f2ba6
+  version: 239fdb9f44a485dc18bdf99ae26a3e7548bc4a04
   subpackages:
   - coordinate
 - name: github.com/influxdata/influxdb
-  version: 7db3db278bfafee3f10767b9322720035688f18b
+  version: a62e7864bb871062558da7cd3c288cb0f37d9239
   subpackages:
   - client/v2
   - models
   - pkg/escape
 - name: github.com/influxdata/platform
-  version: 3ee90eefc2d8f57d5208cfaa758772dbfe17b718
+  version: 400bb706d3236629ba51eff5359b718631f45314
   subpackages:
   - models
   - pkg/escape
@@ -181,11 +178,11 @@ imports:
 - name: github.com/magiconair/properties
   version: 7c38529aac7222391b7a2661365177a97e21b998
 - name: github.com/matttproud/golang_protobuf_extensions
-  version: c12348ce28de40eed0136aa2b644d0ee0650e56c
+  version: c182affec369e30f25d3eb8cd8a478dee585ae7d
   subpackages:
   - pbutil
 - name: github.com/miekg/dns
-  version: 5f5f2380fc10ac3069b7b5f3bb043a38dfe68d58
+  version: ba6747e8a94115e9dc7738afb87850687611df1b
 - name: github.com/mitchellh/go-homedir
   version: ae18d6b8b3205b561c79e8e5f69bff09736185f4
 - name: github.com/mitchellh/mapstructure
@@ -193,7 +190,7 @@ imports:
 - name: github.com/pelletier/go-toml
   version: 27c6b39a135b7dc87a14afb068809132fb7a9a8f
 - name: github.com/pmezard/go-difflib
-  version: 792786c7400a136282c1664665ae0a8db921c6c2
+  version: 5d4384ee4fb2527b0a1256a821ebfc92f91efefc
   subpackages:
   - difflib
 - name: github.com/prometheus/client_golang
@@ -202,17 +199,17 @@ imports:
   - prometheus
   - prometheus/promhttp
 - name: github.com/prometheus/client_model
-  version: 5c3871d89910bfb32f5fcab2aa4b9ec68e65a99f
+  version: f287a105a20ec685d797f65cd0ce8fbeaef42da1
   subpackages:
   - go
 - name: github.com/prometheus/common
-  version: 67670fe90761d7ff18ec1d640135e53b9198328f
+  version: 2998b132700a7d019ff618c06a234b47c1f3f681
   subpackages:
   - expfmt
   - internal/bitbucket.org/ww/goautoneg
   - model
 - name: github.com/prometheus/procfs
-  version: 1dc9a6cbc91aacc3e8b2d63db4d2e957a5394ac4
+  version: b1a0a9a36d7453ba0f62578b99712f3a6c5f82d1
   subpackages:
   - internal/util
   - nfs
@@ -222,13 +219,13 @@ imports:
   subpackages:
   - zk
 - name: github.com/SermoDigital/jose
-  version: 803625baeddc3526d01d321b5066029f53eafc81
+  version: f6df55f235c24f236d11dbcf665249a59ac2021f
   subpackages:
   - crypto
   - jws
   - jwt
 - name: github.com/spaolacci/murmur3
-  version: f09979ecbc725b9e6d41a297405f65e7e8804acc
+  version: 0d12bf811670bf6a1a63828dfbd003eded177fce
 - name: github.com/spf13/afero
   version: a5d6946387efe7d64d09dcba68cdd523dc1273a3
   subpackages:
@@ -238,13 +235,13 @@ imports:
 - name: github.com/spf13/jwalterweatherman
   version: 94f6ae3ed3bceceafa716478c5fbf8d29ca601a1
 - name: github.com/spf13/pflag
-  version: 916c5bf2d89aff6fd3e10e7811337218dfa81cb5
+  version: e57e3eeb33f795204c1ca35f56c44f83227c6e66
 - name: github.com/spf13/viper
   version: 25b30aa063fc18e48662b86996252eabdcf2f0c7
 - name: github.com/stretchr/objx
   version: ef50b0de28773081167c97fc27cf29a0bf8b8c71
 - name: github.com/stretchr/testify
-  version: 5b93e2dc01fd8fbf32aa74a198b0ebe78f6f6b6f
+  version: 12b6f73e6084dad08a7c6e575284b177ecafbc71
   subpackages:
   - assert
   - mock
@@ -255,12 +252,12 @@ imports:
 - name: github.com/VividCortex/gohistogram
   version: 51564d9861991fb0ad0f531c99ef602d0f9866e6
 - name: golang.org/x/crypto
-  version: 505ab145d0a99da450461ae2c1a9f6cd10d1f447
+  version: ff983b9c42bc9fbf91556e191cc8efb585c16908
   subpackages:
   - ed25519
   - ed25519/internal/edwards25519
 - name: golang.org/x/net
-  version: 927f97764cc334a6575f4b7a1584a147864d5723
+  version: 1e06a53dbb7e2ed46e91183f219db23c6943c532
   subpackages:
   - bpf
   - internal/iana
@@ -268,11 +265,11 @@ imports:
   - ipv4
   - ipv6
 - name: golang.org/x/sys
-  version: b00e65af1da0681cde6c8227839a0ca53bbf16bb
+  version: 48ac38b7c8cbedd50b1613c0fccacfc7d88dfcdf
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: 17bcc049122f272a32787ba38073ee47433023e9
+  version: e6919f6577db79269a6443b9dc46d18f2238fb5d
   subpackages:
   - transform
   - unicode/norm

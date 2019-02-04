@@ -22,6 +22,7 @@ import (
 	"os"
 	"os/signal"
 
+	money "github.com/Comcast/golang-money"
 	"github.com/Comcast/webpa-common/concurrent"
 	"github.com/Comcast/webpa-common/logging"
 	"github.com/Comcast/webpa-common/secure"
@@ -79,6 +80,9 @@ func scytale(arguments []string) int {
 		logger.Log(level.Key(), level.ErrorValue(), logging.ErrorKey(), err, logging.MessageKey(), "unable to create primary handler")
 		return 2
 	}
+
+	spanner := money.NewHTTPSpanner(money.ScytaleON())
+	primaryHandler = spanner.Decorate(primaryHandler)
 
 	var (
 		_, scytaleServer, done = webPA.Prepare(logger, nil, metricsRegistry, primaryHandler)
